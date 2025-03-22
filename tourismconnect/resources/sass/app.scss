@@ -1,0 +1,54 @@
+// resources/sass/app.scss
+
+// Importation de Bootstrap avec namespace pour éviter les conflits
+@use "bootstrap/scss/bootstrap" with (
+  $primary: #3490dc,
+  $secondary: #6c757d,
+  $success: #38c172,
+  $info: #6cb2eb,
+  $warning: #ffed4a,
+  $danger: #e3342f,
+  $light: #f8f9fa,
+  $dark: #343a40,
+  $enable-rounded: true,
+  $enable-shadows: true,
+  $enable-gradients: false,
+  $enable-transitions: true
+);
+
+// Personnalisations supplémentaires
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+// Styles de la barre de navigation
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+// Styles des cartes
+.card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// Styles des boutons
+.btn {
+    font-weight: 500;
+    
+    &.btn-primary {
+        box-shadow: 0 4px 6px rgba(#3490dc, 0.2);
+        
+        &:hover {
+            box-shadow: 0 6px 10px rgba(#3490dc, 0.3);
+        }
+    }
+}
